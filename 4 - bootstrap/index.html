@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meu primeiro site com bootstrap</title>
+        <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Popovers</h1>
+            <!-- topo -->
+            <button class="btn btn-primary" 
+                    title="titulo do popover"
+                    data-toggle="popover" 
+                    data-content="Aqui é o conteúdo do meu popover" 
+                    data-placement="top">
+                Meu popover
+            </button>
+
+            <!-- direita -->
+            <button class="btn btn-primary" 
+                    data-toggle="popover" 
+                    data-content="Aqui é o conteúdo do meu popover" 
+                    data-placement="right">
+                Meu popover
+            </button>
+
+            <!-- esquerda -->
+            <button class="btn btn-primary" 
+                    data-toggle="popover" 
+                    data-content="Aqui é o conteúdo do meu popover" 
+                    data-placement="left">
+                Meu popover
+            </button>
+
+            <!-- baixo -->
+            <button class="btn btn-primary" 
+                    data-toggle="popover" 
+                    data-content="Aqui é o conteúdo do meu popover" 
+                    data-placement="bottom"
+                    >
+                Meu popover
+            </button>
+
+<!-- ---------------- Tooltips ----------------------------------- -->
+            <h1>Tooltips</h1>
+            <!-- top -->
+            <button class="btn btn-success" 
+                    data-toggle="tooltip"
+                    title="titulo tooltip"
+                    data-placement="top"
+                    >
+                Meu tootip
+            </button>
+
+            <!-- direita -->
+            <button class="btn btn-success" 
+                    data-toggle="tooltip"
+                    title="titulo tooltip"
+                    data-placement="right"
+                    >
+                Meu tootip
+            </button>
+
+            <!-- esquerda -->
+            <button class="btn btn-success" 
+                    data-toggle="tooltip"
+                    title="titulo tooltip"
+                    data-placement="left"
+                    >
+                Meu tootip
+            </button>
+
+            <!-- baixo -->
+            <button class="btn btn-success" 
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="titulo tooltip"
+                    >
+                Meu tootip
+            </button>
+
+
+        </div>
+        
+        <footer>
+            <!-- JS -->
+            <script src="public/js/jquery.js"></script>
+            <script src="public/js/bootstrap.bundle.min.js"></script>
+            <script>
+                $(function() {
+                    $('[data-toggle="popover"]').popover();
+                    $('[data-toggle="tooltip"').tooltip();
+                });
+            </script>
+        </footer>
+    </body>
+</html>
