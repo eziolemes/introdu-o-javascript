@@ -163,6 +163,60 @@
                 </div>
             </div>
 
+            <!-- ---------------- Collapse ----------------------------------- -->
+
+            <h2>Collapse</h2>
+
+            <button class="btn btn-warning" 
+                    data-toggle="collapse"
+                    data-target="#secreto"
+            >
+            Mostre mais
+            </button>
+
+            <div class="collapse" id="secreto">
+                Mensagem secreta.
+            </div>
+
+            <!-- ---------------- Collapse ----------------------------------- -->
+
+            <h2>Scrollspy</h2>
+
+            <div class="row">
+                <div class="col-4">
+                    <div id="livro" class="list-group">
+                        <a href="#c1" class="list-group-item list-group-item-action">Capítulo 1</a>
+                        <a href="#c2" class="list-group-item list-group-item-action">Capítulo 2</a>
+                        <a href="#c3" class="list-group-item list-group-item-action">Capítulo 3</a>
+                        <a href="#c4" class="list-group-item list-group-item-action">Capítulo 4</a>
+                        <a href="#c5" class="list-group-item list-group-item-action">Capítulo 5</a>
+                    </div>
+                </div>
+                <div class="col-8" id="caixaLivro" style="position: relative; height: 500px; overflow: auto">
+                    <div data-spy="scroll" data-target="#livro" data-offset="0">
+                        <h3 id="c1">Capítulo 1</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in sodales mi. Sed at convallis elit, in ultrices augue. Cras tellus ligula, gravida nec libero ut, vulputate sollicitudin ex. Maecenas pharetra augue in erat rhoncus ultrices. Nunc id urna eleifend, tristique erat sit amet, maximus magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor orci molestie, vestibulum lacus at, auctor sapien. Sed tellus ante, auctor tincidunt neque id, aliquet volutpat dolor. Proin fermentum ultrices dui ac ullamcorper. Nunc fermentum elit lectus, a elementum est porttitor eget. Nullam eget lacus ut neque porttitor malesuada. Aliquam elementum erat nisi, congue tristique diam aliquam quis. Pellentesque vitae sollicitudin nisl.
+                        </p>
+                        <h3 id="c2">Capítulo 2</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in sodales mi. Sed at convallis elit, in ultrices augue. Cras tellus ligula, gravida nec libero ut, vulputate sollicitudin ex. Maecenas pharetra augue in erat rhoncus ultrices. Nunc id urna eleifend, tristique erat sit amet, maximus magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor orci molestie, vestibulum lacus at, auctor sapien. Sed tellus ante, auctor tincidunt neque id, aliquet volutpat dolor. Proin fermentum ultrices dui ac ullamcorper. Nunc fermentum elit lectus, a elementum est porttitor eget. Nullam eget lacus ut neque porttitor malesuada. Aliquam elementum erat nisi, congue tristique diam aliquam quis. Pellentesque vitae sollicitudin nisl.
+                        </p>
+                        <h3 id="c3">Capítulo 3</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in sodales mi. Sed at convallis elit, in ultrices augue. Cras tellus ligula, gravida nec libero ut, vulputate sollicitudin ex. Maecenas pharetra augue in erat rhoncus ultrices. Nunc id urna eleifend, tristique erat sit amet, maximus magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor orci molestie, vestibulum lacus at, auctor sapien. Sed tellus ante, auctor tincidunt neque id, aliquet volutpat dolor. Proin fermentum ultrices dui ac ullamcorper. Nunc fermentum elit lectus, a elementum est porttitor eget. Nullam eget lacus ut neque porttitor malesuada. Aliquam elementum erat nisi, congue tristique diam aliquam quis. Pellentesque vitae sollicitudin nisl.
+                        </p>
+                        <h3 id="c4">Capítulo 4</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in sodales mi. Sed at convallis elit, in ultrices augue. Cras tellus ligula, gravida nec libero ut, vulputate sollicitudin ex. Maecenas pharetra augue in erat rhoncus ultrices. Nunc id urna eleifend, tristique erat sit amet, maximus magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor orci molestie, vestibulum lacus at, auctor sapien. Sed tellus ante, auctor tincidunt neque id, aliquet volutpat dolor. Proin fermentum ultrices dui ac ullamcorper. Nunc fermentum elit lectus, a elementum est porttitor eget. Nullam eget lacus ut neque porttitor malesuada. Aliquam elementum erat nisi, congue tristique diam aliquam quis. Pellentesque vitae sollicitudin nisl.
+                        </p>
+                        <h3 id="c5">Capítulo 5</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in sodales mi. Sed at convallis elit, in ultrices augue. Cras tellus ligula, gravida nec libero ut, vulputate sollicitudin ex. Maecenas pharetra augue in erat rhoncus ultrices. Nunc id urna eleifend, tristique erat sit amet, maximus magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor orci molestie, vestibulum lacus at, auctor sapien. Sed tellus ante, auctor tincidunt neque id, aliquet volutpat dolor. Proin fermentum ultrices dui ac ullamcorper. Nunc fermentum elit lectus, a elementum est porttitor eget. Nullam eget lacus ut neque porttitor malesuada. Aliquam elementum erat nisi, congue tristique diam aliquam quis. Pellentesque vitae sollicitudin nisl.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
         
         <footer>
@@ -182,6 +236,7 @@
                     modal.find('.modal-title').text('Mensagem para ' + recipient);
                     modal.find('.modal-body input').val(recipient);
                 });
+                $('#caixaLivro').scrollspy({ target: '#livro'});
             </script>
         </footer>
     </body>
