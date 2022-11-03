@@ -9,7 +9,9 @@
     </head>
     <body>
         <div class="container">
-            <h1>Popovers</h1>
+            <h1>Bootstrap</h1>
+
+            <h2>Popovers</h2>
             <!-- topo -->
             <button class="btn btn-primary" 
                     title="titulo do popover"
@@ -45,7 +47,7 @@
             </button>
 
 <!-- ---------------- Tooltips ----------------------------------- -->
-            <h1>Tooltips</h1>
+            <h2>Tooltips</h2>
             <!-- top -->
             <button class="btn btn-success" 
                     data-toggle="tooltip"
@@ -82,6 +84,84 @@
                 Meu tootip
             </button>
 
+            <!-- ---------------- Tooltips ----------------------------------- -->
+
+            <h2>Modal</h2>
+
+            <button class="btn btn-secondary" 
+                    data-toggle="modal"
+                    data-target="#conteudoModal"
+                    data-nome="Ezio"
+            >
+                Mensagem para Ézio
+            </button>
+
+            <button class="btn btn-secondary" 
+                    data-toggle="modal"
+                    data-target="#conteudoModal"
+                    data-nome="Lucas"
+            >
+                Mensagem para Lucas
+            </button>
+
+            <button class="btn btn-secondary" 
+                    data-toggle="modal"
+                    data-target="#conteudoModal"
+                    data-nome="Nasa"
+            >
+                Mensagem para Nasa
+            </button>
+
+            <button class="btn btn-secondary" 
+                    data-toggle="modal"
+                    data-target="#conteudoModal"
+                    data-nome="Urso"
+            >
+                Mensagem para Urso
+            </button>
+
+            <!-- Modal -->
+            <div id="conteudoModal" class="modal fade">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                    <div class="modal-content">
+                        <!-- título -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Meu modal</h4>
+                            <button class="close" data-dismiss="modal" arial-label="Fechar">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <!-- conteúdo -->
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-4">
+                                    <span>Destinatário: </span>
+                                </div>
+                                <div class="col-8">
+                                    <input type="text" name="para" class="form-control">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-4">
+                                    <span>Mensagem: </span>
+                                </div>
+                                <div class="col-8">
+                                    <textarea class="form-control" name="" id="">
+
+                                    </textarea>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- rodapé -->
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
         
@@ -93,6 +173,14 @@
                 $(function() {
                     $('[data-toggle="popover"]').popover();
                     $('[data-toggle="tooltip"').tooltip();
+                });
+
+                $('#conteudoModal').on('show.bs.modal', function(event) {
+                    var button = $(event.relatedTarget);
+                    var recipient = button.data('nome')
+                    var modal = $(this);
+                    modal.find('.modal-title').text('Mensagem para ' + recipient);
+                    modal.find('.modal-body input').val(recipient);
                 });
             </script>
         </footer>
